@@ -46,3 +46,14 @@ let carX = 220;
 const carY = 500;
 
 
+const car = document.getElementById('car');
+const LEFT_ARROW_CODE = 37;
+const RIGHT_ARROW_CODE = 39;
+
+document.addEventListener('keydown', (event) => {
+  if (event.keyCode === LEFT_ARROW_CODE) {
+    car.style.left = parseInt(car.style.left) - 10 + 'px';
+  } else if (event.keyCode === RIGHT_ARROW_CODE) {
+    car.style.left = parseInt(car.style.left) + 10 + 'px';
+  }
+});
